@@ -1,0 +1,28 @@
+{
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "",
+  "summary": {
+    "title": "University Records Portal - Talah   ",
+    "owner": "تالة الغامدي",
+    "description": "بوابة جامعة افتراضية تتيح للطالبة عرض سجلها ولعضو التدريس تعديل درجات مقرراته. الأصول المهمة هي سرية السجلات وسلامة الدرجات وتوفر الخدمة. جميع البيانات افتراضية.   ",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Portal DFD",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "د.أحلام خربوش",
+    "threatTop": 0
+  }
+}
