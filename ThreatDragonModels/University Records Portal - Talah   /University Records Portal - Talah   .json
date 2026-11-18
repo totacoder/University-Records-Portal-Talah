@@ -550,6 +550,19 @@
                   "new": false,
                   "number": 2,
                   "score": ""
+                },
+                {
+                  "id": "da25963c-c48d-437d-b81d-966f5b7c1ab3",
+                  "title": "TM-03",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": ": مستخدم يرسل طلبات تصدير كبيرة ومتكررة. عدم وجود حدود لمعدل الطلبات وحجم العمل قد يستنفد موارد قاعدة البيانات، فيبطئ الخدمة أو يوقفها.",
+                  "mitigation": "وضع حدود لمعدل الطلبات وحجم التصدير والمهلة الزمنية، واستخدام طابور للعمليات الكبيرة. المسؤول فريق تشغيل النظام. معيار التحقق: اختبار حمل محدود ومصرّح به يثبت تطبيق الحدود واستمرار الخدمة. نكتب المعيار فقط؛ لا ننفذ حملًا على بوابة حقيقية.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -557,7 +570,7 @@
                 "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 1,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             },
@@ -1149,6 +1162,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "د.أحلام خربوش",
-    "threatTop": 2
+    "threatTop": 3
   }
 }
