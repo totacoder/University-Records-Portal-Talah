@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "67016157-2de8-4c3e-9eb3-adb282e9d195",
             "zIndex": -1,
+            "id": "67016157-2de8-4c3e-9eb3-adb282e9d195",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "University services trust boundary",
@@ -537,16 +537,36 @@
                   "new": false,
                   "number": 1,
                   "score": ""
+                },
+                {
+                  "id": "01691195-5314-4e82-8304-024e98b771f3",
+                  "title": "TM-02",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": ": مستخدم مسجل الدخول يستدعي وظيفة تعديل درجات مقرر ما يملك صلاحية عليه. غياب التحقق من صلاحية المقرر يسمح بتغيير الدرجات. الأثر هو فقدان سلامة البيانات.",
+                  "mitigation": "قصر تعديل الدرجة على عضو التدريس المخوّل لهذا المقرر، والتحقق من الصلاحية مع كل تعديل، وتسجيل التغييرات. المسؤول فريق تطوير البوابة. معيار التحقق: حساب غير مخوّل يحاول التعديل فيرفض النظام الطلب ويسجل المحاولة. الحماية مقترحة ولم تُختبر.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 0,
+                "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 1,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -722,6 +742,26 @@
             },
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -1109,6 +1149,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "د.أحلام خربوش",
-    "threatTop": 1
+    "threatTop": 2
   }
 }
