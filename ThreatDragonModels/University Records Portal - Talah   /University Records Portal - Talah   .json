@@ -21,6 +21,43 @@
         "cells": [
           {
             "position": {
+              "x": 379.99999999999886,
+              "y": -179.99999999999972
+            },
+            "size": {
+              "width": 310,
+              "height": 690
+            },
+            "attrs": {
+              "label": {
+                "text": "University services trust boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "67016157-2de8-4c3e-9eb3-adb282e9d195",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "University services trust boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "f32acfbc-56d6-4eee-9d2c-dc0e14b89313",
+                "a6b428dd-96b5-4451-9268-1a3fcf32232a",
+                "b2796c92-e88b-430d-ac93-bbda4deb0dfb",
+                "e1aed1d2-3b1f-4041-96ff-b1633339a22a"
+              ],
+              "containedElements": [
+                "b31a45e1-a941-4c8f-9428-7dea3bba0737",
+                "cda91e59-02a5-4415-a7d1-17706c9c6dc2",
+                "e5996b52-02ec-4319-95a9-ad6745f4bc59"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": 210,
               "y": 180
             },
@@ -40,6 +77,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -123,7 +161,6 @@
               ]
             },
             "id": "3b9a1c82-ce84-4c78-9ef6-ce896c7435b6",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": " browser Student",
@@ -138,7 +175,7 @@
           },
           {
             "position": {
-              "x": 672,
+              "x": 702,
               "y": 180
             },
             "size": {
@@ -157,6 +194,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -240,7 +278,6 @@
               ]
             },
             "id": "24028676-b220-4250-9c9c-d1d58900f184",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "browser Lecturer ",
@@ -274,6 +311,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -357,7 +395,6 @@
               ]
             },
             "id": "b31a45e1-a941-4c8f-9428-7dea3bba0737",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "provider Identity ",
@@ -391,6 +428,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -474,7 +512,6 @@
               ]
             },
             "id": "cda91e59-02a5-4415-a7d1-17706c9c6dc2",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "API/Portal ",
@@ -492,7 +529,7 @@
           },
           {
             "position": {
-              "x": 322.5,
+              "x": 416,
               "y": 400
             },
             "size": {
@@ -514,6 +551,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -597,7 +635,6 @@
               ]
             },
             "id": "e5996b52-02ec-4319-95a9-ad6745f4bc59",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "Student records",
@@ -645,7 +682,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "67016157-2de8-4c3e-9eb3-adb282e9d195"
+              ]
             },
             "labels": [
               " Record request"
@@ -705,58 +744,6 @@
               "cell": "3b9a1c82-ce84-4c78-9ef6-ce896c7435b6",
               "port": "dd60f237-115c-4c3f-a1b1-c970d1106f6c"
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": " update Grade",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              " update Grade"
-            ],
-            "id": "e1aed1d2-3b1f-4041-96ff-b1633339a22a",
-            "source": {
-              "x": 730,
-              "y": 180
-            },
-            "target": {
-              "cell": "cda91e59-02a5-4415-a7d1-17706c9c6dc2",
-              "port": "bbf8c8dd-de5a-40f9-a951-5d28517a9654"
-            },
-            "vertices": [
-              {
-                "x": 620,
-                "y": 140
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -897,7 +884,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "67016157-2de8-4c3e-9eb3-adb282e9d195"
+              ]
             },
             "labels": [
               "claims Identity "
@@ -949,7 +938,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "67016157-2de8-4c3e-9eb3-adb282e9d195"
+              ]
             },
             "labels": [
               " query Scoped"
@@ -967,6 +958,60 @@
               {
                 "x": 540,
                 "y": 370
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": " update Grade",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "67016157-2de8-4c3e-9eb3-adb282e9d195"
+              ]
+            },
+            "labels": [
+              " update Grade"
+            ],
+            "id": "e1aed1d2-3b1f-4041-96ff-b1633339a22a",
+            "source": {
+              "cell": "24028676-b220-4250-9c9c-d1d58900f184",
+              "port": "a7cdfee3-b93b-453a-8201-fe23cb3c3e65"
+            },
+            "target": {
+              "cell": "cda91e59-02a5-4415-a7d1-17706c9c6dc2",
+              "port": "bbf8c8dd-de5a-40f9-a951-5d28517a9654"
+            },
+            "vertices": [
+              {
+                "x": 620,
+                "y": 140
               }
             ]
           },
@@ -1008,8 +1053,8 @@
             ],
             "id": "d80d6eb4-32d2-4d5c-99ba-971f42ecb290",
             "source": {
-              "x": 379,
-              "y": 410
+              "cell": "e5996b52-02ec-4319-95a9-ad6745f4bc59",
+              "port": "f0e0a4dd-73e0-41ba-9a94-dfab40727c8a"
             },
             "target": {
               "cell": "cda91e59-02a5-4415-a7d1-17706c9c6dc2",
