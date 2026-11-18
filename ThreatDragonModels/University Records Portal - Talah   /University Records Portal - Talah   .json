@@ -58,7 +58,7 @@
           },
           {
             "position": {
-              "x": 210,
+              "x": 180,
               "y": 180
             },
             "size": {
@@ -175,7 +175,7 @@
           },
           {
             "position": {
-              "x": 702,
+              "x": 772,
               "y": 180
             },
             "size": {
@@ -409,7 +409,7 @@
           },
           {
             "position": {
-              "x": 476,
+              "x": 486,
               "y": 180
             },
             "size": {
@@ -421,8 +421,8 @@
                 "text": "API/Portal "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -519,12 +519,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d1b0e07e-6944-49d1-bfdd-ac1e4cb56f47",
+                  "title": "TM-01",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "طالبة مسجلة الدخول تغيّر معرّف السجل في الطلب. غياب التحقق من ملكية السجل يسمح بعرض درجات طالبة ثانية. الأثر هو فقدان سرية معلومات الطالبات.",
+                  "mitigation": "التحقق من أن السجل يخص صاحبة الحساب عند كل طلب، ورفض الوصول غير المصرح وتسجيل المحاولة. المسؤول فريق تطوير البوابة. معيار التحقق: حساب الطالبة أ يطلب سجل الطالبة ب، فيرفض النظام الطلب وتظهر المحاولة في السجل. هذه حماية مقترحة لم تُنفّذ أو تُختبر.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -691,12 +713,27 @@
             ],
             "id": "f32acfbc-56d6-4eee-9d2c-dc0e14b89313",
             "source": {
-              "x": 260,
+              "x": 220,
               "y": 180
             },
             "target": {
               "cell": "cda91e59-02a5-4415-a7d1-17706c9c6dc2",
               "port": "bbf8c8dd-de5a-40f9-a951-5d28517a9654"
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           },
           {
@@ -743,7 +780,13 @@
             "target": {
               "cell": "3b9a1c82-ce84-4c78-9ef6-ce896c7435b6",
               "port": "dd60f237-115c-4c3f-a1b1-c970d1106f6c"
-            }
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": 270
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1066,6 +1109,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "د.أحلام خربوش",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
